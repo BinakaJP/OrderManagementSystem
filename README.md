@@ -64,6 +64,7 @@ The API will start on `https://localhost:5XXX` (port will be shown in console)
 
 ### API Documentation
 - **Swagger UI**: `http://localhost:5XXX/swagger`
+![Swagger UI](docs/images/swagger.png)
 
 ### Core Endpoints
 - `GET /api/orders` - List all orders (with pagination)
@@ -71,6 +72,8 @@ The API will start on `https://localhost:5XXX` (port will be shown in console)
 - `POST /api/orders` - Create new order
 - `PUT /api/orders/{id}/status` - Update order status
 - `GET /api/orders/stats` - Get order statistics
+
+@
 
 ### Monitoring
 - `GET /health` - Health check endpoint
@@ -86,11 +89,18 @@ Custom metrics available:
 - `orders_active_total` - Current active orders
 - `http_requests_received_total` - HTTP request metrics
 - `http_request_duration_seconds` - Response time metrics
+ 
+### Metrics (Prometheus)
+![Prometheus Metrics](docs/images/prometheus.png)
 
 ### Grafana
 Access at `http://localhost:3000`
 - **Login**: admin / admin
 - **Dashboard**: "Order Management API Dashboard"
+
+### Monitoring Dashboard (Grafana)
+![Grafana Dashboard](docs/images/grafana-dashboard.png)
+
 
 The dashboard includes:
 - Total orders created
